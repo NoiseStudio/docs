@@ -1,5 +1,5 @@
 # Code Style
-Used by the Noise Studio code style for the C# programming language.
+Noise Studio's code style for the C# programming language.
 #
 
 > Every element that supports an access modifier must have it defined. Include `private`.
