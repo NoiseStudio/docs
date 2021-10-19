@@ -14,6 +14,7 @@ different-terrain-version-blocks-matching
 Commits must be in the imperative present tense and they must be preceded by one of these words:
 * `Add` - Create a capability e.g. feature, test, dependency.
 * `Remove` - Remove a capability e.g. feature, test, dependency.
+* `Edit` - Edit a capability e.g. feature, test.
 * `Fix` - Fix an issue e.g. bug, typo, accident, misstatement.
 * `Bump` - Increase the version of something e.g. dependency.
 * `Make` - Change the build process, or tooling, or infra.
