@@ -74,8 +74,18 @@ namespace Project.Foo {
 ```
 
 ## In Type definitions
-> Elements in groups must be sorted in the order of modifiers:<br>
-static > abstract > virtual > none
+> The groups must be arranged in the same order as here.<br><br>
+Elements in groups must be sorted in the order of modifiers:<br>
+`static > abstract > virtual > none`<br>
+Additionally, in sorted groups of elements located in groups, you sort them into:<br>
+`readonly > volatile > none`<br><br>
+[See example](#sorted-groups-and-elements)
+
+### Constants
+```cs
+public const int PascalCase = 5;
+```
+
 ### Fields
 Public:
 ```cs
@@ -105,6 +115,11 @@ AnyAccessModifier Foo PascalCase { get; set; }
 ```
 ```cs
 [Attribute]
+AnyAccessModifier Foo PascalCase => // line of code;
+```
+> The following ways of writing this element must be separated by a one-line gap from other elements.
+```cs
+[Attribute]
 AnyAccessModifier Foo PascalCase { 
     get {
         // code
@@ -121,10 +136,6 @@ AnyAccessModifier Foo PascalCase {
     set => // line of code;
 }
 ```
-```cs
-[Attribute]
-AnyAccessModifier Foo PascalCase => // line of code;
-```
 
 ### Events
 ```cs
@@ -133,12 +144,21 @@ AnyAccessModifier event Foo PascalCase;
 ```
 
 ### Constructors
+> This element must be separated by a single line gap from other elements.
 ```cs
 [Attribute]
 AnyAccessModifier Foo(Boo example, Boo secondExample) {
 ```
 
+### Deconstructors
+> This element must be separated by a single line gap from other elements.
+```cs
+~Foo() {
+```
+
 ### Methods
+> This element must be separated by a single line gap from other elements.
+
 > Every public method and operator on a public type, even if it is inherited, must be documented. Parameters and result must also be documented.
 ```cs
 /// <summary>
@@ -148,7 +168,7 @@ AnyAccessModifier Foo(Boo example, Boo secondExample) {
 /// <param name="secondExample">Documentation</param>
 /// <returns>Documentation</returns>
 [Attribute]
-AnyAccessModifier Type Foo(Boo example, Boo secondExample) {
+AnyAccessModifier Type PascalCase(Boo example, Boo secondExample) {
 ```
 Generic:
 ```cs
@@ -159,10 +179,12 @@ Generic:
 /// <param name="secondExample">Documentation</param>
 /// <returns>Documentation</returns>
 [Attribute]
-AnyAccessModifier Type Foo<T0, T1>(Boo example, Boo secondExample) {
+AnyAccessModifier Type PascalCase<T0, T1>(Boo example, Boo secondExample) {
 ```
 
 ### Operators
+> This element must be separated by a single line gap from other elements.
+
 > Every public method and operator on a public type, even if it is inherited, must be documented. Parameters and result must also be documented.
 ```cs
 /// <summary>
@@ -252,4 +274,227 @@ foreach (int a in b) {
 Creating new object:
 ```cs
 new Foo();
+```
+
+# Sample codes
+### Sorted groups and elements
+```cs
+namespace Project.Foo {
+    [Attribute]
+    AnyAccessModifier TypeType PascalCase : Bar {
+
+        // These regions are not required.
+        #region Constants
+
+        public const int PascalCase = 5;
+        internal const int PascalCase = 5;
+        protected const int PascalCase = 5;
+        private const int PascalCase = 5;
+
+        #endregion
+        #region Fields
+
+        public static readonly Foo PascalCase;
+        internal static readonly Foo camelCase;
+        protected static readonly Foo camelCase;
+        private static readonly Foo camelCase;
+
+        public static volatile Foo PascalCase;
+        internal static volatile Foo camelCase;
+        protected static volatile Foo camelCase;
+        private static volatile Foo camelCase;
+
+        public static Foo PascalCase;
+        internal static Foo camelCase;
+        protected static Foo camelCase;
+        private static Foo camelCase;
+
+        public readonly Foo PascalCase;
+        internal readonly Foo camelCase;
+        protected readonly Foo camelCase;
+        private readonly Foo camelCase;
+
+        public volatile Foo PascalCase;
+        internal volatile Foo camelCase;
+        protected volatile Foo camelCase;
+        private volatile Foo camelCase;
+
+        public Foo PascalCase;
+        internal Foo camelCase;
+        protected Foo camelCase;
+        private Foo camelCase;
+
+        #endregion
+        #region Properties
+
+        public static readonly Foo PascalCase { get; set; }
+        internal static readonly Foo PascalCase { get; set; }
+        protected static readonly Foo PascalCase { get; set; }
+        private static readonly Foo PascalCase { get; set; }
+
+        public static volatile Foo PascalCase { get; set; }
+        internal static volatile Foo PascalCase { get; set; }
+        protected static volatile Foo PascalCase { get; set; }
+        private static volatile Foo PascalCase { get; set; }
+
+        public static Foo PascalCase { get; set; }
+        internal static Foo PascalCase { get; set; }
+        protected static Foo PascalCase { get; set; }
+        private static Foo PascalCase { get; set; }
+
+        public readonly Foo PascalCase { get; set; }
+        internal readonly Foo PascalCase { get; set; }
+        protected readonly Foo PascalCase { get; set; }
+        private readonly Foo PascalCase { get; set; }
+
+        public volatile Foo PascalCase { get; set; }
+        internal volatile Foo PascalCase { get; set; }
+        protected volatile Foo PascalCase { get; set; }
+        private volatile Foo PascalCase { get; set; }
+
+        public Foo PascalCase { get; set; }
+        internal Foo PascalCase { get; set; }
+        protected Foo PascalCase { get; set; }
+        private Foo PascalCase { get; set; }
+
+        #endregion
+        #region Events
+
+        public static event Foo PascalCase;
+        internal static event Foo PascalCase;
+        protected static event Foo PascalCase;
+        private static event Foo PascalCase;
+
+        public event Foo PascalCase;
+        internal event Foo PascalCase;
+        protected event Foo PascalCase;
+        private event Foo PascalCase;
+
+        #endregion
+        #region Constructors
+
+        public TypeName(Boo example) : base(5) { ...
+        internal TypeName(Boo example) : base(5) { ...
+        protected TypeName(Boo example) : base(5) { ...
+        private TypeName(Boo example) : base(5) { ...
+
+        #endregion
+        #region Deconstructor
+
+        ~TypeName() { ...
+
+        #endregion
+        #region Methods
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="example">Documentation</param>
+        /// <param name="secondExample">Documentation</param>
+        /// <returns>Documentation</returns>
+        public static Type PascalCase(Boo example, Boo secondExample) { ...
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="example">Documentation</param>
+        /// <param name="secondExample">Documentation</param>
+        /// <returns>Documentation</returns>
+        internal static Type PascalCase(Boo example, Boo secondExample) { ...
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="example">Documentation</param>
+        /// <param name="secondExample">Documentation</param>
+        /// <returns>Documentation</returns>
+        protected static Type PascalCase(Boo example, Boo secondExample) { ...
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="example">Documentation</param>
+        /// <param name="secondExample">Documentation</param>
+        /// <returns>Documentation</returns>
+        private static Type PascalCase(Boo example, Boo secondExample) { ...
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="example">Documentation</param>
+        /// <param name="secondExample">Documentation</param>
+        /// <returns>Documentation</returns>
+        public Type PascalCase(Boo example, Boo secondExample) { ...
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="example">Documentation</param>
+        /// <param name="secondExample">Documentation</param>
+        /// <returns>Documentation</returns>
+        internal Type PascalCase(Boo example, Boo secondExample) { ...
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="example">Documentation</param>
+        /// <param name="secondExample">Documentation</param>
+        /// <returns>Documentation</returns>
+        protected Type PascalCase(Boo example, Boo secondExample) { ...
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="example">Documentation</param>
+        /// <param name="secondExample">Documentation</param>
+        /// <returns>Documentation</returns>
+        private Type PascalCase(Boo example, Boo secondExample) { ...
+
+        #endregion
+        #region Operators
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="a">Documentation</param>
+        /// <param name="b">Documentation</param>
+        /// <returns>Documentation</returns>
+        public static Foo operator *(Foo a, Foo b) {
+            return new Foo(a.value * b.value);
+        }
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="a">Documentation</param>
+        /// <param name="b">Documentation</param>
+        /// <returns>Documentation</returns>
+        internal static Foo operator *(Foo a, Foo b) {
+            return new Foo(a.value * b.value);
+        }
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="a">Documentation</param>
+        /// <param name="b">Documentation</param>
+        /// <returns>Documentation</returns>
+        protected static Foo operator *(Foo a, Foo b) {
+            return new Foo(a.value * b.value);
+        }
+
+        /// <summary>
+        /// Documentation
+        /// </summary>
+        /// <param name="a">Documentation</param>
+        /// <param name="b">Documentation</param>
+        /// <returns>Documentation</returns>
+        private static Foo operator *(Foo a, Foo b) {
+            return new Foo(a.value * b.value);
+        }
+
+        #endregion
+
+    } 
+}
 ```
