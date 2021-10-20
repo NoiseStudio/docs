@@ -1,4 +1,4 @@
-# Git - Naming Convention
+# Git - Workflow
 
 ## Branches
 > Name of the branch should is as close as possible to the title of the corresponding task on e.g. Trello or issue.
