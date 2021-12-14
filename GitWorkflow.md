@@ -13,15 +13,15 @@ There are 5 types of branches:
 `dev` branch contains content that is specific to new version that is currently under development.
 There is one `dev` branch per version.
 > Every `dev` branch must be named with following syntax:
-`dev-major.minor.patch`. For example: `dev-0.1.0`.
+`dev-{{ MAJOR }}.{{ MINOR }}.{{ PATCH }}`. For example: `dev-0.1.0`.
 
 `release` branch contains changes that are made in version older than newest version of the project (one that is currently on master).
 This branch should be used for patching/developing older versions of the project, that version change only in patch number.
 > Every `release` branch must be named with following syntax:
-`release-major.minor`. For example: `release-0.1`.
+`release-{{ MAJOR }}.{{ MINOR }}`. For example: `release-0.1`.
 
 `feature` and `fix` branches contain changes related to the specific issue.
-> Name of the `feature` or `fix` branch should start with `feature/issue-number/name` or `fix/issue-number/name` where `name` part should be as close as possible to the title of the corresponding issue.
+> Name of the `feature` or `fix` branch should start with `feature/{{ ISSUE NUMBER }}/{{ NAME }}` or `fix/{{ ISSUE NUMBER }}/{{ NAME }}` where `NAME` part should be as close as possible to the title of the corresponding issue.
 Branches must be named using kebab-case e.g.:<br>
 `feature/34/different-terrain-version-blocks-matching`<br>
 `fix/12/terrain-gaps`
@@ -41,4 +41,4 @@ Commits must be in the imperative present tense and must describe changes that w
 
 * You cannot commit changes that contain changes unrelated to your task. For example, replacing the texture in the API development task.
 
-* It is allowed to use commands such as `"git rebase"`, however, it is not allowed to overwrite commit dates.
+* It is allowed to use commands such as `git rebase`, however, it is not allowed to overwrite commit dates.
