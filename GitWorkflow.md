@@ -27,7 +27,8 @@ Branches must be named using kebab-case e.g.:<br>
 `fix/12/terrain-gaps`
 
 ## Commits
-> Commit message must end with a punctuation mark.
+> A one-sentence commit message cannot end with a period,
+> but a multi-sentence commit message must end with a period.
 
 Commits must be in the imperative present tense and must describe changes that where made in precise and at the same time short form.
 
