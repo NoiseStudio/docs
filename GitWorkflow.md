@@ -8,17 +8,17 @@ There are 5 types of branches:
 - feature
 - fix
 
-`master` branch contains newest version of the project.
+`master` branch contains the newest version of the project.
 
-`dev` branch contains content that is specific to new version that is currently under development.
+`dev` branch contains content that is specific to the version that is currently under development.
 There is one `dev` branch per version.
-> Every `dev` branch must be named with following syntax:
-`dev-{{ MAJOR }}.{{ MINOR }}.{{ PATCH }}`. For example: `dev-0.1.0`.
+> Every `dev` branch must be named with the following syntax:
+`dev-{{ MAJOR }}.{{ MINOR }}.{{ PATCH }}`. <br> For example: `dev-0.1.0`.
 
-`release` branch contains changes that are made in version older than newest version of the project (one that is currently on master).
-This branch should be used for patching/developing older versions of the project, that version change only in patch number.
-> Every `release` branch must be named with following syntax:
-`release-{{ MAJOR }}.{{ MINOR }}`. For example: `release-0.1`.
+`release` branch contains changes in version that is older than the newest version of the project (one that is currently on `master`).
+This branch should be used for patching/developing older versions of the project, that version number change only in patch number.
+> Every `release` branch must be named with the following syntax:
+`release-{{ MAJOR }}.{{ MINOR }}`. <br> For example: `release-0.1`.
 
 `feature` and `fix` branches contain changes related to the specific issue.
 > Name of the `feature` or `fix` branch should be `feature/{{ ISSUE NUMBER }}/{{ NAME }}` or `fix/{{ ISSUE NUMBER }}/{{ NAME }}` where `NAME` part should be as close as possible to the title of the corresponding issue.
@@ -30,7 +30,7 @@ Branches must be named using kebab-case e.g.:<br>
 > A one-sentence commit message cannot end with a period,
 > but a multi-sentence commit message must end with a period.
 
-Commits must be in the imperative present tense and must describe changes that where made in precise and at the same time short form.
+Commits must be named in the imperative present tense and must describe changes that where made in precise and at the same time short form.
 
 ## Workflow
 * You cannot commit directly to production branches such as `master`, `dev` or `release`. To make changes to the production branch, you create a `pull request`, which is then assessed and approved by another developer with the appropriate permissions.<br>
@@ -42,6 +42,7 @@ Commits must be in the imperative present tense and must describe changes that w
 
 * You cannot commit changes that contain changes unrelated to your task. For example, replacing the texture in the API development task.
 
-* It is allowed to use commands such as `git rebase`, however, it is not allowed to overwrite commit dates.
+* It is allowed to use commands such as `git rebase`, however, it is not allowed to overwrite commit dates.<br>
+To follow that use `--committer-date-is-author-date` parameter.
 
 > When project version hasn't been created yet, `dev` branch can't exist in repository and `master` should be used as `dev` branch for first project version.
