@@ -21,7 +21,7 @@ This branch should be used for patching/developing older versions of the project
 `release-{{ MAJOR }}.{{ MINOR }}`. For example: `release-0.1`.
 
 `feature` and `fix` branches contain changes related to the specific issue.
-> Name of the `feature` or `fix` branch should start with `feature/{{ ISSUE NUMBER }}/{{ NAME }}` or `fix/{{ ISSUE NUMBER }}/{{ NAME }}` where `NAME` part should be as close as possible to the title of the corresponding issue.
+> Name of the `feature` or `fix` branch should be `feature/{{ ISSUE NUMBER }}/{{ NAME }}` or `fix/{{ ISSUE NUMBER }}/{{ NAME }}` where `NAME` part should be as close as possible to the title of the corresponding issue.
 Branches must be named using kebab-case e.g.:<br>
 `feature/34/different-terrain-version-blocks-matching`<br>
 `fix/12/terrain-gaps`
@@ -44,4 +44,4 @@ Commits must be in the imperative present tense and must describe changes that w
 
 * It is allowed to use commands such as `git rebase`, however, it is not allowed to overwrite commit dates.
 
-> When there is no project version yet created, `dev` branch doesn't exist on repository and `master` should be used as `dev` branch for first project version.
+> When project version hasn't been created yet, `dev` branch can't exist in repository and `master` should be used as `dev` branch for first project version.
