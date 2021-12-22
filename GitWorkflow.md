@@ -15,7 +15,7 @@ There is one `dev` branch per version.
 > Every `dev` branch must be named with the following syntax:
 `dev-{{ MAJOR }}.{{ MINOR }}.{{ PATCH }}`. <br> For example: `dev-0.1.0`.
 
-> When project version hasn't been created yet, `dev` branch can't exist in repository and `master` should be used as `dev` branch for first project version.
+> When first full project version (one that is not a pre-release) hasn't been created yet, `dev` branch can't exist in repository and `master` should be used as `dev` branch for first project version.
 
 `release` branch contains changes in version that is older than the newest version of the project (one that is currently on `master`).
 This branch should be used for patching/developing older versions of the project, that version number change only in patch number.
