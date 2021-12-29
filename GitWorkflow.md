@@ -32,7 +32,17 @@ Branches must be named using kebab-case e.g.:<br>
 > A one-sentence commit message cannot end with a period,
 > but a multi-sentence commit message must end with a period.
 
-Commits must be named in the imperative present tense and must describe changes that where made in precise and at the same time short form.
+Commits must be in the imperative present tense and should be preceded by one of these words:
+* `Add` - Create a capability e.g. feature, test, dependency.
+* `Remove` - Remove a capability e.g. feature, test, dependency.
+* `Edit` - Edit a capability e.g. feature, test.
+* `Fix` - Fix an issue e.g. bug, typo, accident, misstatement.
+* `Bump` - Increase the version of something e.g. dependency.
+* `Make` - Change the build process, or tooling, or infra.
+* `Refactor` - A code change that must be just a refactoring.
+* `Reformat` - Refactor of formatting, e.g. omit whitespace.
+* `Optimize` - Refactor of performance, e.g. speed up code.
+* `Document` - Refactor of documentation, e.g. help files.
 
 ## Workflow
 * You cannot commit directly to production branches such as `master`, `dev` or `release`. To make changes to the production branch, you create a `pull request`, which is then assessed and approved by another developer with the appropriate permissions.<br>
