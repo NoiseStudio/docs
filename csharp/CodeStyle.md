@@ -40,7 +40,7 @@ Comment
     #if (DEBUG && !EXAMPLE)
         // code
     #elif (!DEBUG && EXAMPLE)
-        // code
+        // code  
     #else
         // code
     #endif
@@ -53,7 +53,7 @@ Comment
 namespace Project.Foo {
     [Attribute]
     AnyAccessModifier TypeType PascalCase : Bar {
-    }
+    } 
 }
 ```
 or for interfaces:
@@ -61,7 +61,7 @@ or for interfaces:
 namespace Project.Foo {
     [Attribute]
     AnyAccessModifier interface IPascalCase : Bar {
-    }
+    } 
 }
 ```
 Generic:
@@ -69,7 +69,7 @@ Generic:
 namespace Project.Foo {
     [Attribute]
     AnyAccessModifier TypeType PascalCase<T0, T1> {
-    }
+    } 
 }
 ```
 
@@ -120,7 +120,7 @@ AnyAccessModifier Foo PascalCase => // line of code;
 > The following ways of writing this element must be separated by a one-line gap from other elements.
 ```cs
 [Attribute]
-AnyAccessModifier Foo PascalCase {
+AnyAccessModifier Foo PascalCase { 
     get {
         // code
     }
@@ -131,7 +131,7 @@ AnyAccessModifier Foo PascalCase {
 ```
 ```cs
 [Attribute]
-AnyAccessModifier Foo PascalCase {
+AnyAccessModifier Foo PascalCase { 
     get => // line of code;
     set => // line of code;
 }
@@ -159,9 +159,7 @@ AnyAccessModifier Foo(Boo example, Boo secondExample) {
 ### Methods
 > This element must be separated by a single line gap from other elements.
 
-> Every public method and operator on a public type, even if it is inherited, must be documented
-(if it is a part of a public API, e.g. test methods are not).
-Parameters and result must also be documented.
+> Every public method and operator on a public type, even if it is inherited, must be documented. Parameters and result must also be documented.
 ```cs
 /// <summary>
 /// Documentation
@@ -182,18 +180,6 @@ Generic:
 /// <returns>Documentation</returns>
 [Attribute]
 AnyAccessModifier Type PascalCase<T0, T1>(Boo example, Boo secondExample) {
-```
-
-## Test methods
-Test method naming should use PascalCase with underscores separating name of the tested method/member,
-what is being tested and the expected result. For example:
-```cs
-[Fact]
-public void Equals_SameInstance_ReturnsTrue() {
-    object o = new object();
-    bool result = o.Equals(o);
-    Assert.True(result);
-}
 ```
 
 ### Operators
@@ -509,6 +495,6 @@ namespace Project.Foo {
 
         #endregion
 
-    }
+    } 
 }
 ```
