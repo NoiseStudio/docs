@@ -8,7 +8,7 @@ You can contribute to open source projects with issues and PRs. Simply filing is
 We always welcome bug reports, API proposals and overall feedback. Here are a few tips on how you can make reporting your issue as effective as possible.
 
 ### Identify where to report
-We have many projects, it is important to report issue in good repository. You should check whether this applies to e.g. NoiseEngine (Core) or NoiseEngine.Cli. But when you do not know, do not panic, always you know use [less formal communication forms](#i-just-want-to-ask-a-simple-question).
+We have many projects, it is important to report issue in good repository. You should check whether this applies to e.g. NoiseEngine (Core) or NoiseEngine.Cli. But when you do not know, do not panic, always you can use [less formal communication forms](#i-just-want-to-ask-a-simple-question).
 
 ### Finding existing issues
 Before filling a new issue, please search issues list to check if it already exists.
@@ -16,7 +16,7 @@ Before filling a new issue, please search issues list to check if it already exi
 If you do find an existing issue, please include your own feedback in the discussion. Do consider upvoting (👍 reaction) the original post, as this helps us prioritize popular issues in our backlog.
 
 ### Writing a good bug report
-Good bug reports make it easier for maintainers to veryfi the underlying problem. The better a bug report, the faster the problem should be resolved. Ideally, a bug report should contain the following information:
+Good bug reports make it easier for maintainers to verify the underlying problem. The better a bug report, the faster the problem should be resolved. Ideally, a bug report should contain the following information:
 * A high-level description of the problem.
 * A minimal reproduction, i.e., the smallest size of code/configuration required to reproduce the wrong behavior.
 * A description of the expected behavior, constracted with the actual behavior observed.
@@ -71,8 +71,8 @@ Now your PR must be checked from one of us maintainers, after it will be approve
 
 But remember to discuss with maintainer and pay attention to they change requests. If you do not pleased of they request, please ping one of our developers.
 
-### My PR is old, but I do not want to fix it, what I should do?
-Propably we just close this PR, but when it is very good, it have chance to be taken by one of our developers to fix it.
+### My PR is old, but I do not want to fix it, what should I do?
+Probably we just close this PR, but when it is very good, it have chance to be taken by one of our developers to fix it.
 
 ## I just want to ask a simple question
 It is not in every case necessary to create a new issue or discussion on GitHub. Then you can use forms of communication less formal like e.g. Discord.
