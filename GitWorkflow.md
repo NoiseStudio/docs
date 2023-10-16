@@ -45,12 +45,14 @@ Commits must be in the imperative present tense and should be preceded by one of
 * `Document` - Refactor of documentation, e.g. help files.
 
 ## Workflow
+> When you are not a member one of us developers merge your PR, when it will be done. Otherwise you should do this.
+
 * You cannot commit directly to production branches such as `master`, `dev` or `release`. To make changes to the production branch, you create a `pull request`, which is then assessed and approved by another developer with the appropriate permissions.<br>
 
 * Every feature or fix must follow order of the branches (`->` means pull request and merge):
   `feature` or `fix` -> `dev` -> `master` -> `release`<br>
 
-* As a developer who is merging changes, you are responsible for resolving conflicts and are responsible for possible errors related to your changes.
+* As a developer who is creating PR, you are responsible for resolving conflicts and are responsible for possible errors related to your changes.
 
 * You cannot commit changes that contain changes unrelated to your task. For example, replacing the texture in the API development task.
 
